@@ -1,44 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
     <script type="module" src="./main.js"></script>
-</head>
-<body>
+    <script
+      src="https://kit.fontawesome.com/02d3447f67.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="container">
-        <div class="music-player">
-            <nav>
-                <div class="circle">
-                    <span>back</span>
-                </div>
-                <div class="circle">
-                    <span>bars</span>
-                </div>
-            </nav>
+      <div class="music-player">
+        <nav id="mobile-nav">
+          <div class="circle">
+            <span>back</span>
+          </div>
+          <div class="circle">
+            <span>bars</span>
+          </div>
+        </nav>
 
-            <div id="song-details">
-                <img src="./media/default_img.jpg" alt="" id="song-img">
-                <h1 id="title"></h1>
-                <h3 id="artist"></h3>
-            </div>
+        <nav id="desktop-nav">
+          <div>
+            <div><input type="text" /></div>
+            <div></div>
+          </div>
+        </nav>
 
-            <div class="audio">
+        <div id="main-media">
+          <div id="song-details">
+            <img src="./media/default_img.jpg" alt="" id="song-img" />
+            <h1 id="title"></h1>
+            <h3 id="artist"></h3>
+            <div class="media-control-layer">
+              <div class="audio">
                 <audio controls id="media" hidden>
-                    <!--<source id="audio" src="" type="audio/mpeg">-->
+                  <!--<source id="audio" src="" type="audio/mpeg">-->
                 </audio>
-                <input type="range" value="0" id="progress">
-            </div>
+                <input type="range" value="0" id="progress" />
+              </div>
 
-            <div class="song-controls">
-                <span id="lastest">last</span>
-                <span id="play" class="play">play</span>
-                <span id="forward">forward</span>
+              <div class="song-controls">
+                <span id="volume"><i class="fa-solid fa-volume-high"></i></span>
+                <span id="lastest"><i class="fa-solid fa-backward"></i></span>
+                <span id="play" class="play"
+                  ><i class="fa-solid fa-play"></i
+                ></span>
+                <span id="forward"><i class="fa-solid fa-forward"></i></span>
+                <span id="audio-device"
+                  ><i class="fa-solid fa-headphones"></i
+                ></span>
+              </div>
             </div>
+          </div>
 
+          <div id="playlist">
+            <div class="playlist-header">
+              <div class="playlist-header-info">
+                <h3>Fila de reproduccion</h3>
+              </div>
+              <div class="playlist-controls">
+                <div class="icon-container-controls">
+                  <span id="repeat"><i class="fa-solid fa-repeat"></i></span>
+                  <span id="shuffle"><i class="fa-solid fa-shuffle"></i></span>
+                </div>
+              </div>
+            </div>
+            <div class="songs-container">
+              <div class="song-card">
+                <img
+                  src="./media/default_img.jpg"
+                  alt=""
+                  id="song-img-playlist"
+                />
+                <div class="song-info-container">
+                  <h3 class="song-card-title">Cancion 1</h3>
+                  <p class="song-card-artist">Artista 1</p>
+                </div>
+                <p class="song-duration">02:16</p>
+              </div>
+              <div class="song-card">
+                <img
+                  src="./media/default_img.jpg"
+                  alt=""
+                  id="song-img-playlist"
+                />
+                <div class="song-info-container">
+                  <h3 class="song-card-title">Cancion 1</h3>
+                  <p class="song-card-artist">Artista 1</p>
+                </div>
+                <p class="song-duration">02:16</p>
+              </div>
+              <div class="song-card">
+                <img
+                  src="./media/default_img.jpg"
+                  alt=""
+                  id="song-img-playlist"
+                />
+                <div class="song-info-container">
+                  <h3 class="song-card-title">Cancion 1</h3>
+                  <p class="song-card-artist">Artista 1</p>
+                </div>
+                <p class="song-duration">02:16</p>
+              </div>
+              <div class="song-card">
+                <img
+                  src="./media/default_img.jpg"
+                  alt=""
+                  id="song-img-playlist"
+                />
+                <div class="song-info-container">
+                  <h3 class="song-card-title">Cancion 1</h3>
+                  <p class="song-card-artist">Artista 1</p>
+                </div>
+                <p class="song-duration">02:16</p>
+              </div>
+              <div class="song-card">
+                <img
+                  src="./media/default_img.jpg"
+                  alt=""
+                  id="song-img-playlist"
+                />
+                <div class="song-info-container">
+                  <h3 class="song-card-title">Cancion 1</h3>
+                  <p class="song-card-artist">Artista 1</p>
+                </div>
+                <p class="song-duration">02:16</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
