@@ -1,11 +1,5 @@
 import createPlaylist from "./utils/playlist.js";
-
-let progress_bar = document.getElementById("progress");
-let media = document.getElementById("media");
-let play_btn = document.getElementById("play");
-const song_img = document.getElementById("song-img");
-const lastest = document.getElementById("lastest");
-const forward = document.getElementById("forward")
+import { progress_bar, media, play_btn, song_img, lastest, forward } from "./elements/elements.js";
 
 const songs = [
         {
@@ -28,11 +22,7 @@ const songs = [
         },
     ];
 
-const last = [];
-
 const playlist = createPlaylist(songs.length);
-
-let playingNow;
 
 window.addEventListener('DOMContentLoaded', () => {
     playingNow = playlist.pop()
