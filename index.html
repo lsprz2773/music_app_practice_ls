@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script type="module" src="./main.js"></script>
     <script
       src="https://kit.fontawesome.com/02d3447f67.js"
@@ -25,231 +28,58 @@
 
         <nav id="desktop-nav">
           <div>
-            <div><input type="text" /></div>
+            <h2><b>Reproduciendo artista: <span class="artist-header" id="artist-header"></span></b></h2>
             <div></div>
           </div>
         </nav>
 
         <div id="main-media">
           <div id="song-details">
-            <img src="./media/default_img.jpg" alt="" id="song-img" />
-            <h1 id="title"></h1>
-            <h3 id="artist"></h3>
-            <div class="media-control-layer">
-              <div class="audio">
-                <audio controls id="media" hidden>
-                  <!--<source id="audio" src="" type="audio/mpeg">-->
-                </audio>
-                <input type="range" value="0" id="progress" />
-              </div>
+              <div class="song-view">
+                  <img src="./media/covers/default.jpg" alt="" id="now-img" class="song-img" />
+                  <div class="now-info">
+                      <h3 id="now-title" class="title"></h3>
+                      <h5 id="now-artist" class="artist"></h5>
+                  </div>
+                  <div class="media-control-layer">
+                      <div class="audio">
+                          <audio controls id="media" hidden>
+                              <!--<source id="audio" src="./media/audio/illseeyoutheretomorrow.mp3" type="audio/mpeg">-->
+                          </audio>
+                      </div>
+                      <div class="progress-controls">
+                          <div class="progress-container">
+                              <span class="now-time" id="now-time">00:00</span>
+                              <input type="range" value="0" id="progress"/>
+                              <span class="max-time" id="max-time"></span>
+                          </div>
 
-              <div class="song-controls">
-                <span id="volume"><i class="fa-solid fa-volume-high"></i></span>
-                <span id="lastest"><i class="fa-solid fa-backward"></i></span>
-                <span id="play" class="play"
-                  ><i class="fa-solid fa-play"></i
-                ></span>
-                <span id="forward"><i class="fa-solid fa-forward"></i></span>
-                <span id="audio-device"
-                  ><i class="fa-solid fa-headphones"></i
-                ></span>
+                          <div class="song-controls">
+                              <span id="volume" class="control-ico"><i class="fa-solid fa-volume-high"></i></span>
+                              <span id="lastest" class="control-ico"><i class="fa-solid fa-backward"></i></span>
+                              <span id="play" class="control-ico"><i class="fa-solid fa-play"></i></span>
+                              <span id="forward" class="control-ico"><i class="fa-solid fa-forward"></i></span>
+                              <span id="audio-device" class="control-ico"><i class="fa-solid fa-headphones"></i></span>
+                          </div>
+                      </div>
               </div>
             </div>
           </div>
 
-          <div id="playlist">
+          <div id="song-center">
             <div class="playlist-header">
               <div class="playlist-header-info">
                 <h3>Fila de reproduccion</h3>
               </div>
               <div class="playlist-controls">
                 <div class="icon-container-controls">
-                  <span id="repeat"><i class="fa-solid fa-repeat"></i></span>
-                  <span id="shuffle"><i class="fa-solid fa-shuffle"></i></span>
+                  <span id="repeat" class="side-controls"><i class="fa-solid fa-repeat"></i></span>
+                  <span id="shuffle" class="side-controls"><i class="fa-solid fa-shuffle"></i></span>
                 </div>
               </div>
             </div>
-            <div class="songs-container">
-              <div class="song-card">
-                <img
-                  src="./media/default_img.jpg"
-                  alt=""
-                  id="song-img-playlist"
-                />
-                <div class="song-info-container">
-                  <h3 class="song-card-title">Cancion 1</h3>
-                  <p class="song-card-artist">Artista 1</p>
-                </div>
-                <p class="song-duration">02:16</p>
-              </div>
-              <div class="song-card">
-                <img
-                  src="./media/default_img.jpg"
-                  alt=""
-                  id="song-img-playlist"
-                />
-                <div class="song-info-container">
-                  <h3 class="song-card-title">Cancion 1</h3>
-                  <p class="song-card-artist">Artista 1</p>
-                </div>
-                <p class="song-duration">02:16</p>
-              </div>
-              <div class="song-card">
-                <img
-                  src="./media/default_img.jpg"
-                  alt=""
-                  id="song-img-playlist"
-                />
-                <div class="song-info-container">
-                  <h3 class="song-card-title">Cancion 1</h3>
-                  <p class="song-card-artist">Artista 1</p>
-                </div>
-                <p class="song-duration">02:16</p>
-              </div>
-              <div class="song-card">
-                <img
-                  src="./media/default_img.jpg"
-                  alt=""
-                  id="song-img-playlist"
-                />
-                <div class="song-info-container">
-                  <h3 class="song-card-title">Cancion 1</h3>
-                  <p class="song-card-artist">Artista 1</p>
-                </div>
-                <p class="song-duration">02:16</p>
-              </div>
-              <div class="song-card">
-                <img
-                  src="./media/default_img.jpg"
-                  alt=""
-                  id="song-img-playlist"
-                />
-                <div class="song-info-container">
-                  <h3 class="song-card-title">Cancion 1</h3>
-                  <p class="song-card-artist">Artista 1</p>
-                </div>
-                <p class="song-duration">02:16</p>
-              </div>
-              <div class="song-card">
-                <img
-                  src="./media/default_img.jpg"
-                  alt=""
-                  id="song-img-playlist"
-                />
-                <div class="song-info-container">
-                  <h3 class="song-card-title">Cancion 1</h3>
-                  <p class="song-card-artist">Artista 1</p>
-                </div>
-                <p class="song-duration">02:16</p>
-              </div>
-              <div class="song-card">
-                <img
-                  src="./media/default_img.jpg"
-                  alt=""
-                  id="song-img-playlist"
-                />
-                <div class="song-info-container">
-                  <h3 class="song-card-title">Cancion 1</h3>
-                  <p class="song-card-artist">Artista 1</p>
-                </div>
-                <p class="song-duration">02:16</p>
-              </div>
-              <div class="song-card">
-                <img
-                  src="./media/default_img.jpg"
-                  alt=""
-                  id="song-img-playlist"
-                />
-                <div class="song-info-container">
-                  <h3 class="song-card-title">Cancion 1</h3>
-                  <p class="song-card-artist">Artista 1</p>
-                </div>
-                <p class="song-duration">02:16</p>
-              </div>
-              <div class="song-card">
-                <img
-                  src="./media/default_img.jpg"
-                  alt=""
-                  id="song-img-playlist"
-                />
-                <div class="song-info-container">
-                  <h3 class="song-card-title">Cancion 1</h3>
-                  <p class="song-card-artist">Artista 1</p>
-                </div>
-                <p class="song-duration">02:16</p>
-              </div>
-              <div class="song-card">
-                <img
-                  src="./media/default_img.jpg"
-                  alt=""
-                  id="song-img-playlist"
-                />
-                <div class="song-info-container">
-                  <h3 class="song-card-title">Cancion 1</h3>
-                  <p class="song-card-artist">Artista 1</p>
-                </div>
-                <p class="song-duration">02:16</p>
-              </div>
-              <div class="song-card">
-                <img
-                  src="./media/default_img.jpg"
-                  alt=""
-                  id="song-img-playlist"
-                />
-                <div class="song-info-container">
-                  <h3 class="song-card-title">Cancion 1</h3>
-                  <p class="song-card-artist">Artista 1</p>
-                </div>
-                <p class="song-duration">02:16</p>
-              </div>
-              <div class="song-card">
-                <img
-                  src="./media/default_img.jpg"
-                  alt=""
-                  id="song-img-playlist"
-                />
-                <div class="song-info-container">
-                  <h3 class="song-card-title">Cancion 1</h3>
-                  <p class="song-card-artist">Artista 1</p>
-                </div>
-                <p class="song-duration">02:16</p>
-              </div>
-              <div class="song-card">
-                <img
-                  src="./media/default_img.jpg"
-                  alt=""
-                  id="song-img-playlist"
-                />
-                <div class="song-info-container">
-                  <h3 class="song-card-title">Cancion 1</h3>
-                  <p class="song-card-artist">Artista 1</p>
-                </div>
-                <p class="song-duration">02:16</p>
-              </div>
-              <div class="song-card">
-                <img
-                  src="./media/default_img.jpg"
-                  alt=""
-                  id="song-img-playlist"
-                />
-                <div class="song-info-container">
-                  <h3 class="song-card-title">Cancion 1</h3>
-                  <p class="song-card-artist">Artista 1</p>
-                </div>
-                <p class="song-duration">02:16</p>
-              </div>
-              <div class="song-card">
-                <img
-                  src="./media/default_img.jpg"
-                  alt=""
-                  id="song-img-playlist"
-                />
-                <div class="song-info-container">
-                  <h3 class="song-card-title">Cancion 1</h3>
-                  <p class="song-card-artist">Artista 1</p>
-                </div>
-                <p class="song-duration">02:16</p>
-              </div>
+            <div class="playlist">
+                <div class="song-list" id="song-list"></div>
             </div>
           </div>
         </div>

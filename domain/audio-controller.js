@@ -1,5 +1,3 @@
-
-
 export default {
     AudioController(playlist){
         this._nextSongs = playlist;

@@ -1,5 +1,6 @@
 import audioController from "../domain/audio-controller.js"
 import createPlaylist from "../utils/playlist.js";
+import interface_data from "../domain/interface_data.js";
 
 const player = {
     _progress_bar: document.getElementById("progress"),
@@ -32,8 +33,8 @@ const player = {
         this._forwd_btn.addEventListener('click', function(){
             audioController.nextSong();
             player._interface.loadSong(
-                player._audioController._actualSong;
-            )
+                player._audioController._actualSong
+            );
         });
         this._last_btn.addEventListener('click', function(){
             audioController.prevSong();
